@@ -1,5 +1,8 @@
 define(["lazyload","bootstrap"],function (){
 
+
+
+
 var common={
 	bstp:function (){
 		//bstp点击下拉菜单禁止
@@ -157,9 +160,9 @@ var common={
 			var str=Math.random();
 
 			$.ajax({
-				url: 'js/cartoonInfo.json?'+str,
+				url: 'js/cartoonInfo.txt?'+str,
 				type: 'GET',
-				dataType: 'json'
+				dataType: 'txt'
 			})
 			.done(function(data) {
 				var len=data["page"+j].length;
@@ -198,9 +201,9 @@ var common={
 		$(".again").click(function (){
 			var str=Math.random();
 			$.ajax({
-				url: 'js/cartoonInfo.json?'+str,
+				url: 'js/cartoonInfo.txt?'+str,
 				type: 'GET',
-				dataType: 'json'
+				dataType: 'txt'
 			})
 			.done(function(data) {
 				$("#bilibiliMoe").empty();
@@ -260,9 +263,9 @@ var fanjuList={
 				str="";
 
 				$.ajax({
-					url: 'js/week.json',
+					url: 'js/week.txt',
 					type: 'GET',
-					dataType: 'json'
+					dataType: 'txt'
 				})
 				.done(function(data) {
 					var len=data["info"].length; //22
@@ -300,12 +303,12 @@ var fanjuList={
 				var str="";
 				var now=i*5;
 				var j=now+5;
-				var url="js/week.json";
+				var url="js/week.txt";
 
 				xhr=$.ajax({
 					url: url,
 					type: 'GET',
-					dataType: 'json'
+					dataType: 'txt'
 				})
 				.done(function(data) {
 					var len=data["info"].length; //22
